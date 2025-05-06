@@ -1,0 +1,53 @@
+.choices__inner {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    background-color: none;
+    padding: 7.5px 7.5px 3.75px;
+     border: 0px; 
+    border-radius: inherit; 
+    font-size: inherit;
+    /* min-height: 44px; */
+    overflow: hidden;
+}
+
+.choices {
+  position: absolute;
+  inset: 0% auto 0% 0%;
+  height: auto;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-left: 4px;
+  border-radius: 7px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #0000001A;
+}
+
+
+.choices__list--single {
+    display: inline-block;
+    padding: 0;
+    width: 100%;
+}
+/* 1) Keep dropdown items full-width */
+.choices__list--dropdown .choices__item--selectable {
+  max-width: none;    /* don’t clamp the dropdown options */
+}
+
+/* 2) Ellipsize only the selected value */
+.choices__list--single .choices__item {
+  display: inline-block;    /* allow width to be applied */
+  max-width: 12ch;           /* roughly 8 characters */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+}
+
+  .embla__slide {
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+  }
+  .embla__slide.is-selected {
+    opacity: 1;
+  }
